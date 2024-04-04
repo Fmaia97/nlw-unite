@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./assets/icon.svg" alt="icone de uma tag html" />
+      </header>
+      <form onsubmit="adicionarParticipantes(event)">
+        <fieldset>
+          <legend>Inscrição</legend>
+
+          <div>
+            <div class="input-wrapper">
+              <img src="./assets/icon-name.svg" />
+              <input
+                type="text"
+                placeholder="Nome Completo"
+                name="name"
+                required
+              />
+            </div>
+
+            <div class="input-wrapper">
+              <img src="./assets/icon-email.svg" />
+              <input type="email" placeholder="Email" name="email" required />
+            </div>
+
+            <button>REALIZAR INSCRIÇÃO</button>
+          </div>
+        </fieldset>
+      </form>
+      <section class="lista-participantes">
+        <h2>Participantes</h2>
+
+        <div>
+          <table width="100%">
+            <thead style="text-align: left">
+              <tr>
+                <th>Parcitipantes</th>
+                <th>Data da Inscrição</th>
+                <th>Data de Check-in</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
+      <script>
+        dayjs.extend(window.dayjs_plugin_relativeTime);
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+      <script>
+        dayjs.locale("pt-br");
+      </script>
+      <script src="scripts.js"></script>
+    </div>
+  </body>
+</html>
